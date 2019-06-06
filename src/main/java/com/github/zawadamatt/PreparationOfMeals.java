@@ -10,7 +10,7 @@ public class PreparationOfMeals extends TimerTask {
     private static List<Beeper> list = new ArrayList<>();
 
     public void orderToPrepare(Beeper beeper) {
-        this.list.add(beeper);
+        list.add(beeper);
     }
 
     public void setKitchen(Kitchen kitchen) {

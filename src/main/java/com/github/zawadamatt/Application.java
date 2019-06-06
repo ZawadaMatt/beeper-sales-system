@@ -9,19 +9,24 @@ public class Application {
 
         Menager menager = new Menager();
         Kitchen kitchen = new Kitchen(menager);
-        menager.setKitchen(kitchen);
         CashRegister cashRegister = new CashRegister();
-        PreparationOfMeals preparationOfMeals = new PreparationOfMeals();
-        preparationOfMeals.setKitchen(kitchen);
         Timer timer = new Timer();
-        timer.schedule(preparationOfMeals, 0, 10000);
+
+        PreparationOfMeals preparationOfMeals = new PreparationOfMeals();
+        menager.setKitchen(kitchen);
+        preparationOfMeals.setKitchen(kitchen);
+
+        timer.schedule(preparationOfMeals, 0, 20000);
         Scanner sc = new Scanner(System.in);
+
         while (true) {
             System.out.println("Wcisnij aby dodac nowe zamównienie");
+            System.out.println("Wcisnij q aby wyjść");
             String userInput = sc.nextLine();
+            if (userInput.equals("q")) {
+                System.exit(0);
+            }
             cashRegister.newOrder(menager);
         }
-
-
     }
 }

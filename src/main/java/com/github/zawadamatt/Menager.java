@@ -4,7 +4,7 @@ public class Menager {
 
     private Kitchen kitchen;
     private CashRegister cashRegister;
-    Giveaway giveaway = new Giveaway();
+    private Giveaway giveaway = new Giveaway();
 
 
     public void newOrder(Beeper beeper) {

@@ -1,17 +1,14 @@
 package com.github.zawadamatt;
 
-import javax.jws.soap.SOAPBinding;
+import java.util.Scanner;
 
 public class CashRegister {
 
-    Menager menager = new Menager();
-
-    public CashRegister() {
-
-    }
-
     public void newOrder(Menager menager) {
-        Beeper beeper = new Beeper("Zamownie ....");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Złóż zamównienie");
+        String userInput = sc.nextLine();
+        Beeper beeper = new Beeper(userInput);
         System.out.println("Przyjęto zamównienie !");
         menager.newOrder(beeper);
     }
