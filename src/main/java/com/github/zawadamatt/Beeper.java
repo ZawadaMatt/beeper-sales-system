@@ -3,7 +3,7 @@ package com.github.zawadamatt;
 import java.time.LocalTime;
 import java.util.UUID;
 
-public class Beeper  {
+public class Beeper {
 
     private LocalTime orderTime;
     private String uuid = UUID.randomUUID().toString();
@@ -12,7 +12,7 @@ public class Beeper  {
     private String orderDescription;
     private boolean inPreparation = true;
 
-    public Beeper(String orderDescription){
+    public Beeper(String orderDescription) {
         this.orderTime = LocalTime.now();
         this.orderDescription = orderDescription;
     }

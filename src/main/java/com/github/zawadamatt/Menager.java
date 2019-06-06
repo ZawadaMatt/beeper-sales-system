@@ -7,15 +7,15 @@ public class Menager {
     Giveaway giveaway = new Giveaway();
 
 
-    public void newOrder(Beeper beeper){
+    public void newOrder(Beeper beeper) {
         kitchen.doOrder(beeper);
     }
 
-    public void orderReady(Beeper beeper){
+    public void orderReady(Beeper beeper) {
         giveaway.callClinet(beeper);
     }
 
-    public void orderRecevived(Beeper beeper){
+    public void orderRecevived(Beeper beeper) {
         System.out.println("Zamownienie odebrane ");
     }
 

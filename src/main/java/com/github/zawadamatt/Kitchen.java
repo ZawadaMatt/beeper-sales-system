@@ -7,16 +7,15 @@ public class Kitchen {
     PreparationOfMeals preparationOfMeals = new PreparationOfMeals();
 
 
-
     public Kitchen(Menager menager) {
         this.menager = menager;
     }
 
-    public void doOrder(Beeper beeper){
+    public void doOrder(Beeper beeper) {
         preparationOfMeals.orderToPrepare(beeper);
     }
 
-    public void orderReady(Beeper beeper){
+    public void orderReady(Beeper beeper) {
         menager.orderReady(beeper);
     }
 }

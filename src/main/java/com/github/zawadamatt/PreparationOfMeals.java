@@ -22,9 +22,9 @@ public class PreparationOfMeals extends TimerTask {
         System.out.println();
         System.out.println("Zamownien w przygotowaniu :" + list.size());
         for (Beeper beeper : list) {
-                list.remove(beeper);
-                kitchen.orderReady(beeper);
-                return;
-            }
+            list.remove(beeper);
+            kitchen.orderReady(beeper);
+            return;
         }
     }
+}

@@ -6,7 +6,7 @@ public class Giveaway {
 
     private Menager menager;
 
-    public void callClinet(Beeper beeper){
+    public void callClinet(Beeper beeper) {
         System.out.println();
         System.out.println("Zamównie o numerze  " + beeper.getUuid() + " do odebrania !");
         System.out.println("Godzina dzwonienia beepera : ");
@@ -14,7 +14,7 @@ public class Giveaway {
         orderRecevived(beeper);
     }
 
-    public void orderRecevived(Beeper beeper){
+    public void orderRecevived(Beeper beeper) {
         System.out.println("Zamowienie odebrane !");
         beeper.setRecevivedTime(LocalTime.now());
 
