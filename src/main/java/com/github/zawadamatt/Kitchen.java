@@ -1,16 +1,19 @@
 package com.github.zawadamatt;
 
+
 public class Kitchen {
 
     Menager menager;
+    PreparationOfMeals preparationOfMeals = new PreparationOfMeals();
+
+
 
     public Kitchen(Menager menager) {
         this.menager = menager;
     }
 
     public void doOrder(Beeper beeper){
-        System.out.println("Robie jezenie ");;
-        orderReady(beeper);
+        preparationOfMeals.orderToPrepare(beeper);
     }
 
     public void orderReady(Beeper beeper){

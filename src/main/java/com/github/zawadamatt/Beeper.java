@@ -10,15 +10,24 @@ public class Beeper  {
     private LocalTime beepTime;
     private LocalTime recevivedTime;
     private String orderDescription;
+    private boolean inPreparation = true;
 
-    public Beeper(){
+    public Beeper(String orderDescription){
         this.orderTime = LocalTime.now();
-        orderDescription = "Zamownienie numer " + uuid;
+        this.orderDescription = orderDescription;
     }
 
     public void setBeepTime(LocalTime beepTime) {
         this.beepTime = beepTime;
         System.out.println(beepTime);
+    }
+
+    public boolean isInPreparation() {
+        return inPreparation;
+    }
+
+    public void setInPreparation(boolean inPreparation) {
+        this.inPreparation = inPreparation;
     }
 
     public void setRecevivedTime(LocalTime recevivedTime) {
@@ -27,5 +36,9 @@ public class Beeper  {
 
     public String getUuid() {
         return uuid;
+    }
+
+    public LocalTime getBeepTime() {
+        return beepTime;
     }
 }

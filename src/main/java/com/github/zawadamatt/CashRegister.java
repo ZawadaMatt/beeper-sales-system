@@ -11,8 +11,8 @@ public class CashRegister {
     }
 
     public void newOrder(Menager menager){
-        Beeper beeper = new Beeper();
-        System.out.println("Nowe zamównienie !");
+        Beeper beeper = new Beeper("Zamownie ....");
+        System.out.println("Przyjęto zamównienie !");
         menager.newOrder(beeper);
     }
 

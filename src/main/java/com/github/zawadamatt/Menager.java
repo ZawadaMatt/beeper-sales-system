@@ -6,6 +6,7 @@ public class Menager {
     private CashRegister cashRegister;
     Giveaway giveaway = new Giveaway();
 
+
     public void newOrder(Beeper beeper){
         kitchen.doOrder(beeper);
     }
@@ -14,9 +15,8 @@ public class Menager {
         giveaway.callClinet(beeper);
     }
 
-    public void orderRecevived(){
+    public void orderRecevived(Beeper beeper){
         System.out.println("Zamownienie odebrane ");
-
     }
 
     public void setKitchen(Kitchen kitchen) {
