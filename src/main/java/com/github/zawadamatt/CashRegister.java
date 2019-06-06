@@ -1,16 +1,13 @@
 package com.github.zawadamatt;
 
-import java.util.Scanner;
+import javax.swing.*;
 
 public class CashRegister {
 
     public void newOrder(Menager menager) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Złóż zamównienie");
-        String userInput = sc.nextLine();
+        String userInput = JOptionPane.showInputDialog("Co chcesz zamówić ?");
         Beeper beeper = new Beeper(userInput);
         System.out.println("Przyjęto zamównienie !");
         menager.newOrder(beeper);
     }
-
 }
